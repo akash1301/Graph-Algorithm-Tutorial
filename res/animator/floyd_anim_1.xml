@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list  android:oneshot="true"   xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+
+    <item android:drawable="@drawable/floyd" android:duration="3000"/>
+    <item android:drawable="@drawable/floyd1" android:duration="3000"/>
+    <item android:drawable="@drawable/floyd2" android:duration="3000"/>
+    <item android:drawable="@drawable/floyd3" android:duration="3000"/>
+    <item android:drawable="@drawable/floyd5" android:duration="3000"/>
+    <item android:drawable="@drawable/floyd6" android:duration="3000"/>
+    <item android:drawable="@drawable/floyd8" android:duration="3000"/>
+    
+    <item android:drawable="@drawable/floyd10" android:duration="3000"/>
+    <item android:drawable="@drawable/floyd11" android:duration="3000"/>
+    <item android:drawable="@drawable/floyd12" android:duration="3000"/>
+    
+    
+    
+</animation-list>

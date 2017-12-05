@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="end"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         >
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical">
+        	
+            <TextView 
+                android:id="@+id/bfs_header"
+        		android:layout_width="match_parent"
+       			android:layout_height="wrap_content"
+        		android:text="Breadth-first Search"
+        		android:textSize="15dp"
+        		android:textStyle="bold"/>
+            <TextView
+        		android:id="@+id/bfs_problem"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/bfs_header"
+        		android:layout_below="@+id/bfs_header"
+        		android:layout_marginTop="20dp"
+        		android:text="Problem"
+        		android:textColorHighlight="@android:color/black"
+        		android:textSize="12dp" />
+            <TextView
+        		android:id="@+id/bfs_prob_des"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/bfs_problem"
+        		android:layout_below="@+id/bfs_problem"
+        		android:text="Given a source vertex s, find the shortest paths( in terms of number of edges ) to every reachable vertex from s."
+        		android:textSize="10dp" />
+            <TextView
+        		android:id="@+id/bfs_solution"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/bfs_prob_des"
+        		android:layout_below="@+id/bfs_prob_des"
+        		android:layout_marginTop="10dp"
+        		android:text="Solution"
+        		android:textSize="12dp" />
+            <TextView
+        		android:id="@+id/bfs_sol_des"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/bfs_solution"
+        		android:layout_below="@+id/bfs_solution"
+        		android:text="The procedure we will use will find all vertices reachable at a distance k. Before discovering reachable vertices at a distance k+1. Ultimately, the algorithm will produce a breadth-first search tree with s as the root. During the execution of the algorithm, vertices will be colored (denoted by u.color). The color represent the vertex's current state as follows,"
+        		android:textSize="10dp" />
+            
+            <TextView
+        		android:id="@+id/bfs_whgb"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/bfs_sol_des"
+        		android:layout_below="@+id/bfs_sol_des"
+        		android:layout_marginLeft="20dp"
+        		android:layout_marginTop="15dp"
+        		android:text="White - the vertex is undiscovered (i.e. currently no path has been found to the vertex)\n\ngray - the vertex has been discovered and is on the frontier, i.e. there may be further vertices that can be discovered\n\nblack -  the vertex has been discovered and has been completely searched" 
+        		android:textSize="10dp"/>
+            <TextView
+        		android:id="@+id/bfs_expln"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/bfs_sol_des"
+        		android:layout_below="@+id/bfs_whgb"
+        		android:layout_marginTop="15dp"
+        		android:text="The algorithm uses additional fields for each vertex\nu.pi - predecessor vertex\nu.d - distance when the vertex is first discovered (and is subsequently the shortest distance from the source)\nWe will employ a queue Q which will track which vertices are currently under discovery. Thus vertices that have not yet been placed in Q will be white ,those that are in Q will be gray, and those that have been removed from Q will be black" 
+        		android:textSize="10dp"/>
+            <TextView 
+        		android:id="@+id/bfs_algo"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/bfs_expln"
+        		android:layout_below="@+id/bfs_expln"
+        		android:layout_marginTop="10dp"
+        		android:text="Algorithm"
+        		android:textSize="12dp"/>
+            <TextView 
+        		android:id="@+id/bfs_pseudo"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/bfs_algo"
+        		android:layout_below="@+id/bfs_algo"
+        		android:layout_marginTop="10dp"
+        		android:text="BFS(G,s)\n1. for each vertex u belongs to G.V-{s}\n2.   u.color == WHITE\n3.   u.d=INF\n4.   u.pi=NIL\n5. s.color = GRAY\n6. s.d = 0\n7. s.pi = NIL\n8. Q = empty\n9. ENQUEUE(Q,s)\n10. while Q != empty\n11.  u = DEQUEUE(Q)\n12.  for each v belongs to G.Adj[u]\n13.   if v.color == WHITE\n14.    v.color=GRAY\n15.    v.d=u.d+1\n16.    v.pi=u\n17.    ENQUEUE(Q,v)\n18.  u.color = BLACK\n"
+        		android:textSize="10dp"
+        />
+            
+            
+            
+        </LinearLayout>
+        
+        
+        
+    </ScrollView>
+    
+
+</LinearLayout>

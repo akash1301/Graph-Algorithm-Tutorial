@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="end"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Depth-first Search"
+        android:textSize="15dp"
+        android:textStyle="bold"
+         />
+
+    <TextView
+        android:id="@+id/problem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/header"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="20dp"
+        android:text="Problem"
+        android:textColorHighlight="@android:color/black"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/prob_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/problem"
+        android:layout_below="@+id/problem"
+        android:text="Given a source vertex s, follow a path to maximal depth and then backtrack to follow any remaining paths available from preceeding vertices. If after exploring the source any vertices remain undiscovered, begin another depth first search at an undiscovered vertex repeating until all vertices in the graph are fully explored"
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/solution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/prob_des"
+        android:layout_below="@+id/prob_des"
+        android:layout_marginTop="10dp"
+        android:text="Solution"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/sol_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/solution"
+        android:layout_below="@+id/solution"
+        android:text="The procedure we will use is similiar to BFS, but instead of finding all vertices at distance k before locating vertices at distance k+1.\nWe will simply fillow any path until no new vertices  can be found along that path. Thus the resulting depth first trees can vary depending on the order in which the vertices are traversed.\nDuring the execution of the algorithm, vertices will again be colored (denoted by u.color) similarly to BFS. As a review, the colors represent the vertex's current state as follows"
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/whgb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sol_des"
+        android:layout_below="@+id/sol_des"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="White - the vertex is undiscovered (i.e. currently no path has been found to the vertex)\n\ngray - the vertex has been discovered and is on the frontier, i.e. there may be further vertices that can be discovered\n\nblack -  the vertex has been discovered and has been completely searched" 
+        android:textSize="10dp"/>
+
+    <TextView
+        android:id="@+id/expln"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sol_des"
+        android:layout_below="@+id/whgb"
+        android:layout_marginTop="15dp"
+        android:text="The DFS algorithm uses similar fields as BFS but also requires a third one f as follows:\nu.pi - predecessor vertex\nu.d - timestamp when the vertex is first discovered ( and is subsequently colored gray)\nu.f - timestamp when the vertex has been fully explored (and is subsequently colored black)" 
+        android:textSize="10dp"/>
+    
+    <TextView 
+        android:id="@+id/algo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/expln"
+        android:layout_below="@+id/expln"
+        android:layout_marginTop="10dp"
+        android:text="Algorithm"
+        android:textSize="12dp"
+        />
+    <TextView 
+        android:id="@+id/pseudo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/algo"
+        android:layout_below="@+id/algo"
+        android:layout_marginTop="10dp"
+        android:text="DFS(G)\n1. for each vertex u belongs to G,V\n2.   u.color=WHITE\n3.   u.pi=NIL\n4. time = 0\n5. for each vertex u belongs to G,V\n6.   if u.color == WHITE\n7.     DFS-VISIT(G,u)\n\nDFS-VISIT(G,u)\n1. time=time+1\n2. u.d=time\n3. u.color=GRAY\n4. for each v belongs to G.Adj[u]\n5.   if v.color == WHITE\n6.     v.pi=u\n7.     DFS-VISIT(G,v)\n8. u.color = BLACK\n9. time=time+1\n10. u.f=time"
+        android:textSize="10dp"
+        />
+    
+    </LinearLayout>
+    </ScrollView>
+    
+
+</LinearLayout>

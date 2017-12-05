@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+    
+    
+    
+    <EditText
+        android:id="@+id/nodetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="Node Number"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edgetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nodetext"
+        android:layout_below="@+id/nodetext"
+        android:layout_marginTop="45dp"
+        android:hint="Edge number"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edgetext"
+        android:layout_below="@+id/edgetext"
+        android:layout_marginTop="55dp"
+        android:hint="Enter adjacency node\n(e.g. node node distance)"
+        android:ems="12" />
+
+    <Button
+        android:id="@+id/continue_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/des"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:text="Continue" />
+    
+
+</RelativeLayout>

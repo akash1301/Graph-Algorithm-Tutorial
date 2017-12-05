@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="end"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         >
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical">
+        
+            <TextView 
+                android:id="@+id/floyd_header"
+        		android:layout_width="match_parent"
+       			android:layout_height="wrap_content"
+        		android:text="Floyd-Warshall"
+        		android:textSize="15dp"
+        		android:textStyle="bold"/>
+            
+            <TextView
+        		android:id="@+id/floyd_des"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/floyd_header"
+        		android:layout_below="@+id/floyd_header"
+        		android:layout_marginTop="20dp"
+        		android:text="The Floyd-Warshall algorithm works based on a property of intermediate vertices of shortest path. An intermediate vertex for a path = &lt;v1,v2,...,vj&gt; is any vertex other than v1 or vj.\nIf the vertices of a graph G are indexed by:\n{1,2,..,n}, then consider a subset of vertices {1,2,..,k}.\nAssume p is a minimum weight path from vertex i to vertex j whose intermediate vertices are drawn from the subset {1,2,..,k}. If we consider vertex k on the path then either,\nk is not an intermediate vertex of p (i.e. is not used in the minimum weight path)\n   all intermediate vertices are in {1,2,..,k-1}\nk is an intermediate vertex of p (i.e. is used in the minimum weight path)\n   we can divide p at k giving two subpaths p1 and p2 giving vi -&gt; k -&gt; vj.\n   by Lemma (subpaths of shortests are also shortest paths) subpaths p1 and p2 are shortest paths with intermediate vertices in {1,2,...,k}."
+        		android:textSize="10dp" />
+            
+            <TextView 
+        		android:id="@+id/floyd_algo"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/floyd_expln"
+        		android:layout_below="@+id/floyd_expln"
+        		android:layout_marginTop="10dp"
+        		android:text="Algorithm"
+        		android:textSize="12dp"/>
+            
+            <TextView 
+        		android:id="@+id/floyd_pseudo"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/floyd_algo"
+        		android:layout_below="@+id/floyd_algo"
+        		android:layout_marginTop="10dp"
+        		android:text="FLOYD-WARSHALL(W)\n1. n=W.rows\n2. D(0) = W\n3. pi(0) = pi(0)ij = NIL if i=j or wij= INF = i if i != j and wij &lt; INF\n4. for k=1 to n\n5.   let D(k)=(d(k)ij) be a new n X n matrix\n6.   for i=1 to n\n7.     for j=1 to n\n8.       dkij = min(d(k-1)ij, d(k-1)ik + d(k-1)kj)\n9.       if d(k-1)ij &lt;= d(k-1)ik + d(k-1)kj\n10.         pi(k)ij = pi(k-1)ij\n11.       else\n12.         pi(k)ij = pi(k-1)kj\n13. return D(n)"
+        		android:textSize="10dp"
+        />
+    
+		
+         </LinearLayout>
+     </ScrollView>
+
+</LinearLayout>

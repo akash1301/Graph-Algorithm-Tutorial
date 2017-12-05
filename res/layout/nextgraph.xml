@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <Button
+        android:id="@+id/butcycle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Cycle"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="100dp" />
+
+    <Button
+        android:id="@+id/buttree"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Tree"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="100dp" />
+
+    <EditText
+        android:id="@+id/editTextgraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:hint="Enter source and destination" >
+
+        <requestFocus />
+    </EditText>
+    
+    <Button
+        android:id="@+id/butshow"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Shortest path"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="100dp" />
+    
+
+</LinearLayout>

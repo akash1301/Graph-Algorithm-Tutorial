@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textViewabout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="28dp"
+        android:text="Graph Algorithm Tutorial" 
+        android:textStyle="bold"
+        android:textSize="24dp"/>
+    
+
+    <TextView
+        android:id="@+id/textViewdeve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewabout"
+        android:layout_below="@+id/textViewabout"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:text="Supervised by,"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textViewname1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewdeve"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="50dp"
+        android:textStyle="bold"
+        android:text="Prof. Dr. Kazi Md. Rokibul Alam"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textViewname2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewdeve"
+        android:layout_below="@+id/textViewname1"
+        android:layout_marginTop="17dp"
+        android:textStyle="bold"
+        android:text="Developed by,"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/textViewakash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewname2"
+        android:layout_below="@+id/textViewname2"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:text="Al Mamun Akash" 
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textViewarijit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/textViewakash"
+        android:text="Arijit Sarker"
+        android:textSize="15dp" 
+        android:textStyle="bold"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>
